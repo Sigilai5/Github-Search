@@ -7,13 +7,15 @@ import { UserComponent } from './user/user.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
 import { DirectDirective } from './user-directive/direct.directive';
+import { PipePipe } from './user-pipe/pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     UserComponent,
-    DirectDirective
+    DirectDirective,
+    PipePipe
   ],
   imports: [
     BrowserModule,
