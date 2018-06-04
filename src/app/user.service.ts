@@ -14,8 +14,7 @@ import {User} from './user-class/user';
 })
 export class UserService {
 
-    clientid = '0bb3242b04827048589f';
-    clientsecret = '93ef49c68878bddfe03c07bcaa22e15672af400f';
+    searchName = 'Sigilai5';
 
     user: User;
 
@@ -34,9 +33,10 @@ export class UserService {
       }
 
       const promise = new Promise(((resolve, reject) => {
-       this.http.get<ApiResponse>('https://api.github.com/users/' + 'Sigilai5' + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret).toPromise().then(response => {
+       this.http.get<ApiResponse>('https://api.github.com/users/' + 'Sigilai5' + '?access_token=' + environment.apiUrl).toPromise().then(response => {
            this.user.user = response.user;
             console.log(response)
+           console.log("Hey There")
 
            resolve();
 
@@ -48,7 +48,7 @@ export class UserService {
                reject(error);
            }
        );
-      });
+      })
 
       return promise;
 
