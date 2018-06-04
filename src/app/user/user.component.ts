@@ -23,28 +23,6 @@ export class UserComponent implements OnInit {
   ngOnInit() {
 
 
-      interface ApiResponse {
-          user: string;
-      }
-
-      const promise = new Promise(((resolve, reject) => {
-          this.http.get<ApiResponse>('https://api.github.com/users/' + 'Sigilai5' + '?client_id=' + this.clientid + '&client_secret=' + this.clientsecret).toPromise().then(response => {
-                  this.user.user = response.user;
-                  console.log(response)
-
-                  resolve();
-
-              },
-
-              error => {
-                  this.user.user = 'Never, never, never give up.';
-
-                  reject(error);
-              }
-          );
-      })
-
-      return promise;
   }
 
   }

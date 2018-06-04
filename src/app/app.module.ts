@@ -6,12 +6,14 @@ import { FormComponent } from './form/form.component';
 import { UserComponent } from './user/user.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
+import { DirectDirective } from './user-directive/direct.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    UserComponent
+    UserComponent,
+    DirectDirective
   ],
   imports: [
     BrowserModule,
