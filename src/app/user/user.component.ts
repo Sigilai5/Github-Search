@@ -22,8 +22,15 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
 
+     this.userService.getUserInfo()
+      this.user = this.userService.user;
 
-  }
+
+
+
+
+
+
 
   }
 
