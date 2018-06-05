@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user-class/user';
-import {HttpModule} from '@angular/http';
-import {HttpClient} from '@angular/common/http';
+import {Repo} from '../user-class/repo';
+
 
 @Component({
   selector: 'app-user',
@@ -13,21 +13,23 @@ import {HttpClient} from '@angular/common/http';
 export class UserComponent implements OnInit {
 
   user: User;
-    private http: any;
+  userName: string;
 
   constructor(private userService: UserService) {
 
 
   }
 
-  ngOnInit() {
+  findProfile() {
+      this.userService.updateProfile(this.userName);
 
-     this.userService.getUserInfo()
+      this.userService.getUserInfo();
       this.user = this.userService.user;
+      // console.log(this.userName)
 
+  }
 
-
-
+  ngOnInit() {
 
 
 
