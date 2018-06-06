@@ -1,27 +1,24 @@
-# Github-Search
+# Github Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+## Github search is a website that allows users to search for a GitHub username.
+#### By **Brian K Sigilai** created on, 1.06.2018
 
-## Development server
+## Description
+### This website allows users to search for a GitHub username and the repositories that belong to a perticular user, see some basic information of that user eg number of followers and number of repositories.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technologies Used
++ Html
++ Css
++ Typescript
++ Angular
++ Git
++ Bootstrap v4
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## known bugs
+#### No known bugs
 
 ## Further help
-
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Licence
+MIT (c) 2017 [Sigilai Brian](https://sigilai5.github.io/Github-Search)
