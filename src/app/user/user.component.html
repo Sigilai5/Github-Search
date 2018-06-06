@@ -1,37 +1,49 @@
 <div class="container">
     <div class="jumbotron"><img src="../../assets/github.png">Github Search </div>
 
-    <form (ngSubmit)="findProfile()" #userForm="ngForm">
+    <form (keyup)="findProfile()" #userForm="ngForm">
         <div class="form-group">
-            <input type="text" placeholder="Search Github User" [(ngModel)]="userName" name="userName">
+            <input type="text" placeholder="Search Github User" [(ngModel)]="userName" name="userName" style="padding-right: 590px">
         </div>
         <button type="Submit" class="btn btn-success btn-lg">Search User</button>
     </form>
 
 
     <div class="row">
-
+           <div *ngIf="user">
         <div class="col-md-3">
             <h1>User</h1>
             <img src="{{user.avatar_url}}" width="400px" height="400px"><br>
             Profile Name:<h4>{{user.login}}</h4>
-
+        </div>
         </div>
         <div class="col-md-6">
             <h1>Profile</h1>
             <button class="btn btn-primary">{{user.followers}} Followers</button>
             <button class="btn btn-warning">{{user.following}} Following</button>
             <button class="btn btn-danger">{{user.public_repos}} Repositories</button>
-
-
         </div>
+
+
     <div class="col-md-3">
+        <div *ngIf="userService.newRepo">
         <h1>Repositories</h1>
-        <div *ngFor="let repo of repos">
-            <h1>{{repo.name}}</h1>
-            <h3>{{repo.description}}</h3>
+
+            <div *ngFor='let repository of userService.newRepo'>
+
+                <a href="{{repository.html_url}}" target="_blank" >{{repository.name}}</a>
+
+            </div>
+
+
+
 
         </div>
+        <!--<div *ngFor="let repo of this.userS">-->
+            <!--<h1>{{repo.repo_url}}</h1>-->
+            <!--<h3>{{repo.description}}</h3>-->
+
+        <!--</div>-->
 
 
     </div>
