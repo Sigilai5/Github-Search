@@ -70,24 +70,21 @@ export class UserService {
     getRepoInfo(username) {
 
          interface ApiResponse {
-             name:string;
-            repo_url:string;
-             description:string;
+             name: string;
+            repo_url: string;
+             description: string;
 
          }
 
         const promise = new Promise(((resolve, reject) => {
-            this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + environment.apiUrl).
-            toPromise().then(response_repo => {
+            this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + environment.apiUrl).toPromise().then(response_repo => {
 
-                    this.newRepo = response_repo
-                console.log(this.newRepo)
+                    this.newRepo = response_repo;
+                    console.log(this.newRepo);
 
-                // this.repo.name = response_repo.name
-                //     this.repo.repo_url = response_repo.repo_url
-                //     this.repo.description = response_repo.description
-
-
+                    // this.repo.name = response_repo.name
+                    //     this.repo.repo_url = response_repo.repo_url
+                    //     this.repo.description = response_repo.description
 
 
                     resolve();
@@ -97,7 +94,7 @@ export class UserService {
                     reject(error);
                 }
             );
-        });
+        }));
 
         return promise;
 

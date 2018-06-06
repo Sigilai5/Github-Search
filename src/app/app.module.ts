@@ -8,6 +8,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
 import { DirectDirective } from './user-directive/direct.directive';
 import { PipePipe } from './user-pipe/pipe.pipe';
+import { HighlightDirective } from './app-directive.directive';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { PipePipe } from './user-pipe/pipe.pipe';
     FormComponent,
     UserComponent,
     DirectDirective,
-    PipePipe
+    PipePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

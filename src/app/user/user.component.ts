@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
 
   user: User;
   repos: Repo;
-  reporesults:any;
+  reporesults: any;
 
   userName: string;
 
@@ -28,7 +28,7 @@ export class UserComponent implements OnInit {
       this.user = this.userService.user;
 
       this.userService.getRepoInfo(this.userName)
-      this.reporesults = this.userService.newRepo
+      this.reporesults = this.userService.newRepo;
 
 
       }
@@ -37,9 +37,9 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
 
-      this.userService.getRepoInfo()
+      this.userService.getRepoInfo(this.userName)
       this.repos = this.userService.repo;
-      console.log(this.userService.repo.name)
+      console.log(this.userService.repo.name);
 
 
 
