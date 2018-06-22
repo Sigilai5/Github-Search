@@ -7,8 +7,8 @@ import { UserComponent } from './user/user.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
 import { DirectDirective } from './user-directive/direct.directive';
-import { PipePipe } from './user-pipe/pipe.pipe';
 import { HighlightDirective } from './app-directive.directive';
+// import {RoutesModule} from './routes/routes.module';
 
 
 @NgModule({
@@ -17,13 +17,14 @@ import { HighlightDirective } from './app-directive.directive';
     FormComponent,
     UserComponent,
     DirectDirective,
-    PipePipe,
-    HighlightDirective
+    HighlightDirective,
+      // RoutesModule
   ],
   imports: [
     BrowserModule,
       FormsModule,
       HttpClientModule
+
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

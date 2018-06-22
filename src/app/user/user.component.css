@@ -17,3 +17,10 @@ img{
 form{
     padding-left: 100px;
 }
+
+body{
+    background-image: url("../../assets/sky.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
